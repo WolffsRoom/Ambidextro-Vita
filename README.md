@@ -29,6 +29,7 @@
   <img src="https://img.shields.io/badge/RELEASE-NOT%20AVAILABLE-555555?style=for-the-badge" alt="No public release yet">
   <img src="https://img.shields.io/badge/ENGINE-GODOT%204%20%2B%20GXM-478cbf?style=for-the-badge&logo=godotengine&logoColor=white" alt="Godot 4 and native GXM">
 </div>
+<div align="center">
 
 <br>
 
@@ -45,7 +46,16 @@ The port currently boots and runs on real PS Vita hardware. Menu navigation, gam
 | PC-to-Vita patcher | **Not ready**, being designed and validated |
 | Public VPK / Release | **Not published** |
 
-See [development status and known issues](docs/PORT_STATUS.md) for details. These are development milestones, **not** a claim that the full game has passed end-to-end testing.
+
+_If you enjoy my work, consider supporting the development!_
+<p align="center">
+ <strong>Support this and other projects</strong></a>
+</p>
+
+[<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="48">](https://www.buymeacoffee.com/5rsrt7j4z8f)
+
+</div>
+
 
 ## About the port
 
