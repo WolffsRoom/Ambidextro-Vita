@@ -1,0 +1,12 @@
+*.vpk
+*.pck
+*.exe
+*.dll
+*.zip
+game_data/
+SteamFiles/
+__pycache__/
+build/
+dist/
+patch_data/
+VitaFiles/

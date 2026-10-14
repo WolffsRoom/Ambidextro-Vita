@@ -17,16 +17,16 @@
 
 > [!IMPORTANT]
 > **Work in progress!**
-> No public release or patcher is available yet. This repository currently contains documentation and screenshots only. It does **not** provide a VPK, game files, or a playable download. A legally obtained PC copy of *Ambidextro* will be required once the patcher is ready.
+> **First experimental beta released.** Download the lite VPK and Windows patcher from [Releases](https://github.com/WolffsRoom/Ambidextro-Vita/releases). You must own the original Steam/PC game (supported version 1.2.5). No ready-made commercial game_data is distributed.
 
 ## Project status
 
 <div align="center">
-  <img src="https://img.shields.io/badge/STATE-IN%20DEVELOPMENT-ffc107?style=for-the-badge" alt="In development">
+  <img src="https://img.shields.io/badge/STATE-BETA-ffc107?style=for-the-badge" alt="In development">
   <img src="https://img.shields.io/badge/TESTING-REAL%20PS%20VITA-377bb5?style=for-the-badge" alt="Testing on PS Vita">
   <br>
-  <img src="https://img.shields.io/badge/PATCHER-WIP-ff9800?style=for-the-badge" alt="Patcher in development">
-  <img src="https://img.shields.io/badge/RELEASE-NOT%20AVAILABLE-555555?style=for-the-badge" alt="No public release yet">
+  <img src="https://img.shields.io/badge/PATCHER-WINDOWS%20v1.0-brightgreen?style=for-the-badge" alt="Windows patcher v1.0">
+  <img src="https://img.shields.io/badge/RELEASE-v0.1.0%20BETA-377bb5?style=for-the-badge" alt="Beta pre-release v0.1.0">
   <img src="https://img.shields.io/badge/ENGINE-GODOT%204%20%2B%20GXM-478cbf?style=for-the-badge&logo=godotengine&logoColor=white" alt="Godot 4 and native GXM">
 </div>
 <div align="center">
@@ -43,8 +43,8 @@ The port currently boots and runs on real PS Vita hardware. Menu navigation, gam
 | Audio | Music playback and transitions implemented, regression testing ongoing |
 | Video settings | FPS cap (30 / 40 / 60 / Unlocked), software brightness and Screen Effects submenu |
 | Performance | 60 FPS in some scenes, drops remain in heavier gameplay and during transitions |
-| PC-to-Vita patcher | **Not ready**, being designed and validated |
-| Public VPK / Release | **Not published** |
+| PC-to-Vita patcher | **v1.0 Windows patcher** — validated against PC/Steam 1.2.5 |
+| Public VPK / Release | **First beta pre-release** — [Download](https://github.com/WolffsRoom/Ambidextro-Vita/releases) |
 
 
 _If you enjoy my work, consider supporting the development!_
@@ -86,23 +86,27 @@ This is an **unofficial fan project**, not affiliated with or endorsed by Majora
 <sub>Captured during development on PS Vita. Screenshots may show debugging overlays, incomplete effects, or performance that differs from later builds.</sub>
 </p>
 
-## Planned installation and patcher
+## Installation and patcher
 
-The patcher is **still in development**, so the steps below describe the intended layout and **are not installation instructions for a released build**.
+**The first experimental beta is available as a lightweight VPK and a separate Windows patcher.** A legally owned PC/Steam **Ambidextro 1.2.5** copy is required.
 
-The goal is to let owners use files from their own legitimate [Ambidextro PC / Steam installation](https://store.steampowered.com/app/3445580/Ambidextro/) to prepare the Vita-compatible external game data. The intended target directory is:
+1. Download both files from [Releases](https://github.com/WolffsRoom/Ambidextro-Vita/releases).
+2. Extract the Windows patcher ZIP and run **AmbidextroVitaPatcher.exe**. Keep its **GDRE** folder next to the EXE.
+3. Point the patcher to your Steam installation or **Ambidextro.pck**. It rebuilds the Vita **game_data** and validates **3,052** output files by SHA-256.
+4. Copy the generated **VitaFiles/ambidextrovita/** folder into **ux0:data/** using VitaShell.
+5. Check that the result is **ux0:data/ambidextrovita/game_data/**, then install the lite VPK.
 
-<pre>ux0:data/ambidextrovita/game_data/</pre>
+See the [full installation guide](docs/INSTALL.md) and [patcher documentation](Patcher/README.md).
 
-**Do not download unrelated game-data packages from third-party sites.** The patcher will be documented and published only after its output has been verified. No original commercial game data, soundtrack, or other proprietary assets are distributed through this repository.
+**Do not download unrelated ready-made game_data packages.** This project does not distribute the original commercial game's files.
 
 ## Current development priorities
 
-- Finish and validate the PC-to-Vita patcher.
+- Expand patcher support beyond the currently validated PC/Steam 1.2.5 input after testing.
 - Improve FPS consistency and reduce stage-loading/restart stalls.
 - Resolve remaining cutscene alpha, shader and CanvasGroup rendering differences.
 - Verify the in-game **Exit → LiveArea** path and settings on real hardware.
-- Complete stability and end-to-end gameplay testing before publishing a release.
+- Complete stability and end-to-end gameplay testing before marking the first beta stable.
 
 ## Technical background
 

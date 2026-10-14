@@ -1,6 +1,6 @@
 # Development status — Ambidextro for PS Vita
 
-**Public status: work in progress. No release or patcher is available.**
+**Public status: v0.1.0 Beta 1 — experimental pre-release available.**
 
 These are development tests, not guarantees about a release build.
 
@@ -13,8 +13,8 @@ These are development tests, not guarantees about a release build.
 | Audio | Implemented and under observation | Playback and music transitions |
 | Save/settings | Implemented | Regression testing ongoing |
 | Exit to LiveArea | Pending device verification | Native exit path compiled locally |
-| PC-to-Vita patcher | In development | No validated public workflow yet |
-| Public downloadable build | Not available | No Release until patcher is ready |
+| PC-to-Vita patcher | v1.0 Windows | Tested with original Steam 1.2.5 input |
+| Public downloadable build | First beta | Lite VPK and source-to-Vita patcher, no commercial game files |
 
 ## Performance
 
