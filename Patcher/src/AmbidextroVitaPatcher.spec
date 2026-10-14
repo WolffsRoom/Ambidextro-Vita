@@ -25,4 +25,9 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False, upx=False, console=True,
     disable_windowed_traceback=False,
+    # Works in this development layout and in the published Patcher/src tree.
+    icon=str(next(p for p in (
+        spec_dir.parent.parent / "icon.ico",
+        spec_dir.parent / "icon.ico"
+    ) if p.is_file())),
 )
