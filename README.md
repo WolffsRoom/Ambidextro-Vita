@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/AmbidextroVita.png">
-    <source media="(prefers-color-scheme: light)" srcset="assets/brand/Ambidextro-Vita-Black.png">
+    <source media="(prefers-color-scheme: light)" srcset="assets/brand/AmbidextroVita.png">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/Ambidextro-Vita-Black.png">
     <img src="assets/brand/Ambidextro-Vita-Black.png" alt="Ambidextro Vita" width="280">
   </picture>
 </p>
