@@ -20,6 +20,15 @@ These are development tests, not guarantees about a release build.
 
 Some scenes approach 60 FPS, while heavier rooms and transitions still drop frames. Native rendering work has included batching, texture lookup caching, transforms and screen-space culling. Sustained 60 FPS has **not** been confirmed.
 
+## In testing (next build, not released)
+
+Internal build PCK1 (2026-10-28), waiting for hardware results:
+
+- **Packed game data:** game files ship as a single `game.pck` (about 112 MB, 6 files instead of about 3,000 loose files and 221 MB). Scenes are binary and scripts are pre-tokenized, which should shorten the long first load before the main menu. On PC the main scene now starts in about half the time.
+- **New boot animation:** two PNG decoder threads on separate CPU cores play all 180 frames at a steady 30 FPS.
+- **CapUnlocker (optional):** with the CapUnlocker kernel plugin installed, the audio mixer thread moves to the fourth CPU core. Without the plugin nothing changes.
+- **Known issue under investigation:** restarting a level stalls for about 4 seconds in the first physics step of the new level.
+
 ## Known issues
 
 - Desktop CanvasGroup composition and unsupported shaders can change the opening cutscene on Vita.
