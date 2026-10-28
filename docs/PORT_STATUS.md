@@ -22,11 +22,12 @@ Some scenes approach 60 FPS, while heavier rooms and transitions still drop fram
 
 ## In testing (next build, not released)
 
-Internal build PCK1 (2026-10-28), waiting for hardware results:
+Internal build PCK2 (2026-10-28), waiting for hardware results. It replaces PCK1, which made no visible difference on hardware and caused audio crackling.
 
-- **Packed game data:** game files ship as a single `game.pck` (about 112 MB, 6 files instead of about 3,000 loose files and 221 MB). Scenes are binary and scripts are pre-tokenized, which should shorten the long first load before the main menu. On PC the main scene now starts in about half the time.
-- **New boot animation:** two PNG decoder threads on separate CPU cores play all 180 frames at a steady 30 FPS.
-- **CapUnlocker (optional):** with the CapUnlocker kernel plugin installed, the audio mixer thread moves to the fourth CPU core. Without the plugin nothing changes.
+- **Newer runtime:** the port now uses the same Godot 4 Vita 2D runtime as the Tenebrarium port. Audio is mixed like the Godot 3 Vita driver (44.1 kHz, small blocks), the GDScript VM is compiled for speed, SubViewports render to real GPU targets, and tiles outside the screen are skipped.
+- **Faster first load:** the music (87 MB) no longer loads before the main menu. It loads in the background after the menu appears, or when a level needs it. On PC the main scene now loads in about a third of the time.
+- **Packed game data:** game files ship as a single `game.pck` (about 112 MB). Scenes are binary and scripts are pre-tokenized.
+- **Boot:** the 30 FPS boot animation plays all 180 frames, and its last frame stays on screen while the game loads instead of a black screen.
 - **Known issue under investigation:** restarting a level stalls for about 4 seconds in the first physics step of the new level.
 
 ## Known issues
